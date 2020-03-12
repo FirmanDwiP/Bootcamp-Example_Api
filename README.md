@@ -39,7 +39,7 @@ Daftar Kategori
 
             ],
             "meta": {
-                "total": 100,
+                "total": 50,
                 "page": 1,
                 "limit":10
                 
@@ -60,7 +60,7 @@ Menambah Kategori
 
     + Headers
 
-            Location: /categories/15
+            Location: /categories/8
 
     + Body
 
