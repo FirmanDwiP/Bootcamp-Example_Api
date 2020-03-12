@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: https://oimtrust.com/api/
+HOST:  https://private-7bc5e7-examplefirman.apiary-mock.com
 # Profile API
 Tutorial membuat API Blueprint dengan apiary.io
 # Group Profile
@@ -8,7 +8,7 @@ Tutorial membuat API Blueprint dengan apiary.io
 - Request (application/json)
 - Response 200 (application/json)
     - Attributes (Profile)
-### Filter Profile
+### Filter Profile [GET /profile{?type}]
 - Parameters
 - type : Tetap (enum[string], optional)
         - Default : `Empty`
@@ -20,14 +20,23 @@ Tutorial membuat API Blueprint dengan apiary.io
 - Request (application/json)
 - Response 200 (application/json)
     - Attributes (Profile)
+    
+### Create Profile [POST]
+- Request (application/json)
+    
+    - Attributes (Profile Create)
+- Response 201 (application/json)
+- Attributes (Profile)
+
 # Data Structures
-## Profile (object)
-- id : 6c34a6af-752d-408a-b5d3-00a368e7201e (string, required)
-- name : Fathur Rohim (string, required)
-- email : `rohim@dot-indonesia.com` (string, required)
-- phone : `081388878676` (string, required)
+## Profile Create (object)
+- name : Firman Dwi (string, required)
+- email : `fdp080@gmail.com` (string, required)
+- phone : `085870067006` (string, required)
 - type : Tetap (enum[string], required)
     - Tetap
     - Freelance
     - Kontrak
-- image_url : https://www.oimtrust.com/assets/img/oim.jpg
+## Profile (object)
+- id :8c56a8af (string, required)
+- Include Profile Create
